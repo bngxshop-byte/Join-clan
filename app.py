@@ -19,7 +19,7 @@ JWT_REGEX = re.compile(r'(eyJ[A-Za-z0-9_\-\.=]+)')
 
 # ====== الدوال الأساسية ======
 def get_jwt_token_from_api(uid, password):
-    url1 = f"https://jwt-liard-eight.vercel.app/get?uid={uid}&password={password}"
+    url1 = f"https://addremovejwt-xeds.vercel.app/get_token?uid={uid}&password={password}"
     try:
         response = httpx.get(url1, timeout=15.0)
         if response.status_code == 200:
